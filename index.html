@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wizard World | my HTML JavaScript game</title>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+	</head>
+
+	<body style='margin: 0; padding: 0; background-color: white; font-family: sans-serif;'>
+
+		<!-- comment margin and position and will be left top side -->
+		<table border='0' style='top:0; left:0; right:0; bottom:0; margin:auto; position:absolute; '>
+			<tr>
+			<td>
+
+				<!-- keys for control -->
+				<div style='z-index: -1; height:36px;'>
+					<div style='float:left; color:#757575; background-color:lightblue; opacity:.8;'>
+						<font>
+							move with <font color='green'>arrows</font> or <font color='green'>wasd</font>
+							<BR>
+							shoot with <font color='green'>space</font>
+						</font>
+					</div>
+					<div style='float:right; color:#757575; background-color:lightblue; opacity:.8;'>
+						Score: <span id="score" style='color:green; font-size:2em;'></span>
+					</div>
+
+				</div>
+
+				<!-- Canvas -->
+				<div id="canvas-div" style='width:900px; height:643px;'>
+				</div>
+
+			</td>
+			</tr>
+		</table>
+		
+		<!-- overlay "Game Over" -->
+		<div id="game-over-overlay" style='top:0; left:0; right:0; bottom:0; margin:auto; width:512px; height:480px; position:absolute; z-index: 1; display:none; background-color:black; opacity:.5;'>
+			<div id="game-over" style='margin:auto; height:200px; text-align:center; color:white;'>
+				<h1>GAME OVER</h1>
+				<button id="play-again" style='font-size: 1.5em;'>Play Again</button>
+			</div>
+		</div>
+
+		<!-- base -->
+		<script type="text/javascript" src="js/base/frame_request.js"></script>
+		<script type="text/javascript" src="js/base/images_loader.js"></script>
+		<script type="text/javascript" src="js/base/keyboard_mouse.js"></script>
+		<script type="text/javascript" src="js/base/algorithms.js"></script>
+		<script type="text/javascript" src="js/base/sprite.js"></script>
+
+		<!-- settings -->
+		<script type="text/javascript" src="js/my_settings.js"></script>
+	    
+		<!-- my -->
+		<script type="text/javascript" src="js/my_game_draw_keyboard.js"></script>
+		<script type="text/javascript" src="js/my_move.js"></script>
+
+	</body>
+
+</html>
